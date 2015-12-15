@@ -22,5 +22,5 @@ Package.onUse(function(api) {
     'react-helmet.browserify.js'
   ]);
 
-  api.export('ReactRouter');
+  api.export('ReactHelmet');
 });
