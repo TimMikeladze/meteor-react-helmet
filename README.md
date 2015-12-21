@@ -1,36 +1,30 @@
 # Install
 `meteor add nfl:react-helmet`
 
-This reusable React component will manage all of your changes to the document head with support for document title, meta, link, script, and base tags.
+This reusable React component will manage all of your changes to the document head with support for document title, meta, link, script, and base tags. For full documentation visit the [react-helmet](https://github.com/nfl/react-helmet) repo.
 
 **Integrated with reactrouter:react-router-ssr for server-rendering SEO**
 
 ## Examples
 ```javascript
-import React from "react";
-import Helmet from "react-helmet";
-
-export default class Application extends React.Component {
+Application = React.createClass({
     render() {
         return (
             <div className="application">
-                <Helmet title="My Title" />
+                <ReactHelmet title="My Title" />
                 ...
             </div>
         );
     }
-};
+});
 ```
 
 ```javascript
-import React from "react";
-import Helmet from "react-helmet";
-
-export default class Application extends React.Component {
+Application = React.createClass({
     render() {
         return (
             <div className="application">
-                <Helmet
+                <ReactHelmet
                     title="My Title"
                     titleTemplate="MySite.com - %s"
                     base={{"target": "_blank", "href": "http://mysite.com/"}}
